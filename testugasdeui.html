@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Form Registrasi</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <style>
+    body {
+      background: #234876;
+      margin: 0;
+      padding: 0;
+      overflow-x: hidden;
+      position: relative;
+      font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    }
+
+    .container {
+      position: relative;
+      z-index: 2;
+      background-color: #fff;
+      padding: 20px;
+      border-radius: 5px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      margin-top: 50px;
+      max-width: 400px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .form-container {
+      background-color: #3cbdb3;
+      padding: 20px;
+      border-radius: 5px;
+    }
+
+    .form-container h2 {
+      text-align: center;
+      color: #000000;
+      font-weight: bolder;
+    }
+
+    .form-group label {
+      color: #234876;
+      font-weight: bold;
+    }
+
+    .btn-primary {
+      background-color: #003366;
+      border-color: #003366;
+      font-weight: bold;
+      transition: background-color 0.3s ease;
+    }
+
+    .btn-primary:hover {
+      background-color: #002040;
+      border-color: #002040;
+      transform: translateY(-2px);
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .form-group input[type="text"],
+    .form-group input[type="email"],
+    .form-group input[type="password"],
+    .form-group select {
+      background-color: #f0f4f8;
+      border: none;
+      border-radius: 5px;
+      padding: 10px;
+      width: 100%;
+      color: #234876;
+      font-weight: bold;
+    }
+
+    .form-group input[type="text"]:focus,
+    .form-group input[type="email"]:focus,
+    .form-group input[type="password"]:focus,
+    .form-group select:focus {
+      outline: none;
+      box-shadow: 0 0 3px #3cbdb3;
+    }
+
+    .form-group .input-group-append button {
+      border: none;
+      background-color: transparent;
+      color: #888;
+      padding: 0;
+      cursor: pointer;
+    }
+
+    .form-group .input-group-append button:focus {
+      outline: none;
+    }
+
+    .form-group .input-group-append button:hover {
+      color: #555;
+    }
+
+    .form-group .input-group-append button:active {
+      transform: translateY(1px);
+    }
+
+    .form-group .input-group-append button:focus-visible {
+      outline: auto;
+    }
+
+    .password-toggle-icon {
+      font-size: 16px;
+      position: relative;
+      top: -1px;
+    }
+
+    .svg-top {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 50%;
+      z-index: 1;
+    }
+
+    .svg-bottom {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 50%;
+      z-index: 1;
+    }
+  </style>
+</head>
+<body>
+  <svg class="svg-top" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+    <path fill="#3cbdb3" fill-opacity="1" d="M0,288L48,245.3C96,203,192,117,288,80C384,43,480,53,576,53.3C672,53,768,43,864,58.7C960,75,1056,117,1152,128C1248,139,1344,117,1392,106.7L1440,96L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path>
+  </svg>
+
+  <svg class="svg-bottom" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+    <path fill="#3cbdb3" fill-opacity="1" d="M0,288L48,245.3C96,203,192,117,288,80C384,43,480,53,576,53.3C672,53,768,43,864,58.7C960,75,1056,117,1152,128C1248,139,1344,117,1392,106.7L1440,96L1440,0L1392,0C1344,0,1248,0,1152,0C1056,0,960,0,864,0C768,0,672,0,576,0C480,0,384,0,288,0C192,0,96,0,48,0L0,0Z"></path>
+  </svg>
+
+  <div class="container">
+    <div class="form-container">
+      <h2>Form Registrasi</h2>
+      <form>
+        <div class="form-group">
+          <label for="name">Nama</label>
+          <input type="text" class="form-control" id="name" placeholder="Masukkan Nama">
+        </div>
+        <div class="form-group">
+          <label for="birthdate">Tanggal Lahir</label>
+          <div class="row">
+            <div class="col">
+              <input type="text" class="form-control" id="birth-day" placeholder="Tanggal">
+            </div>
+            <div class="col">
+              <input type="text" class="form-control" id="birth-month" placeholder="Bulan">
+            </div>
+            <div class="col">
+              <input type="text" class="form-control" id="birth-year" placeholder="Tahun">
+            </div>
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="gender">Gender</label>
+          <select class="form-control" id="gender">
+            <option value="">Pilih Gender</option>
+            <option value="male">Laki-laki</option>
+            <option value="female">Perempuan</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input type="email" class="form-control" id="email" placeholder="Masukkan Email">
+        </div>
+        <div class="form-group">
+          <label for="password">Password</label>
+          <div class="input-group">
+            <input type="password" class="form-control" id="password" placeholder="Masukkan Password">
+            <div class="input-group-append">
+              <button class="btn" type="button" id="show-password-toggle" onclick="togglePasswordVisibility()"><span class="password-toggle-icon">&#128065;</span></button>
+            </div>
+          </div>
+        </div>
+        <button type="submit" class="btn btn-primary">Daftar</button>
+      </form>
+      <p style="text-align:center;margin-top:10px;">Sudah memiliki akun? <a href="#" style="color:#003366;">Login</a></p>
+    </div>
+  </div>
+
+  <script>
+    function togglePasswordVisibility() {
+      var passwordInput = document.getElementById("password");
+      var passwordToggle = document.getElementById("show-password-toggle");
+
+      if (passwordInput.type === "password") {
+        passwordInput.type = "text";
+        passwordToggle.innerHTML = "<span class='password-toggle-icon'>&#128064;</span>";
+      } else {
+        passwordInput.type = "password";
+        passwordToggle.innerHTML = "<span class='password-toggle-icon'>&#128065;</span>";
+      }
+    }
+  </script>
+
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
